@@ -1,0 +1,33 @@
+#!/bin/bash
+
+variable="one"
+
+change_globally() {
+    echo "change_globally():"
+    echo "  variable=$variable"
+    variable="two"
+    echo "  variable=$variable"
+}
+
+change_locally() {
+    echo "change_locally():"
+    echo "  variable=$variable"
+    local variable="three"
+    echo "  variable=$variable"
+}
+
+echo "variable=$variable"
+change_globally
+echo "variable=$variable"
+change_locally
+echo "variable=$variable"
+
+(
+    variable="four"
+    echo "variable=$variable"
+)
+
+echo "variable=$variable"
+
+echo | variable="five"
+echo "variable=$variable"

@@ -1,0 +1,5 @@
+/dev/sdb 1008
+/dev/sdb 1676
+/dev/sdc 1505
+/dev/sdc 4115
+/dev/sdd 999

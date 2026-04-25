@@ -1,0 +1,21 @@
+#!/bin/bash
+
+as_markdown_table() {
+    echo
+    echo '| Team | Points |'
+    echo '| ---- | -----: |'
+    while read team score; do
+        echo '|' "$team" '|' "$score" '|'
+    done
+    echo
+}
+
+(
+    echo '---'
+    echo 'title: Scoring table'
+    echo '---'
+
+    echo '# Scoring table'
+
+    preprocess_scores < scores.txt | sum_by_keys | sort -n -k 2 -r | as_markdown_table
+)
