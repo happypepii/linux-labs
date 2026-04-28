@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Phosphorus",
+        "en": "Phosphorus",
+        "cz": "Fosfor"
+    },
+    "symbol": "P",
+    "atomic_number": 15,
+    "atomic_mass": 30.97376163
+}

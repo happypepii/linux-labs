@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Carboneum",
+        "en": "Carbon",
+        "cz": "Uhlík"
+    },
+    "symbol": "C",
+    "atomic_number": 6,
+    "atomic_mass": 12.0
+}

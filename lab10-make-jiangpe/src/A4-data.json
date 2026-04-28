@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Nitrogenium",
+        "en": "Nitrogen",
+        "cz": "Dusík"
+    },
+    "symbol": "N",
+    "atomic_number": 7,
+    "atomic_mass": 14.003074
+}

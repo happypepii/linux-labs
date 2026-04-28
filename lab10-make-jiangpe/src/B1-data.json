@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Ferrum",
+        "en": "Iron",
+        "cz": "Železo"
+    },
+    "symbol": "Fe",
+    "atomic_number": 26,
+    "atomic_mass": 55.9349375
+}

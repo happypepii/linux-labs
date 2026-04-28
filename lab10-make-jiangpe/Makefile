@@ -1,7 +1,7 @@
 .PHONY: all clean
 
-CARDS = A1 A2
-
+DATA_FILES = $(wildcard src/*-data.json)
+CARDS = $(patsubst src/%-data.json,%,$(DATA_FILES))
 TARGETS = $(addprefix out/, $(addsuffix .png, $(CARDS)))
 
 all: $(TARGETS)

@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Aurum",
+        "en": "Gold",
+        "cz": "Zlato"
+    },
+    "symbol": "Au",
+    "atomic_number": 79,
+    "atomic_mass": 196.9665687
+}

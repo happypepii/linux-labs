@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Uranium",
+        "en": "Uranium",
+        "cz": "Uran"
+    },
+    "symbol": "U",
+    "atomic_number": 92,
+    "atomic_mass": 238.0507882
+}
