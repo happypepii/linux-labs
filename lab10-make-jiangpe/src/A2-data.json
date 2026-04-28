@@ -1,0 +1,10 @@
+{
+    "name": {
+        "int": "Oxygenium",
+        "en": "Oxygen",
+        "cz": "Kyslík"
+    },
+    "symbol": "O",
+    "atomic_number": 8,
+    "atomic_mass": 15.99491462
+}
