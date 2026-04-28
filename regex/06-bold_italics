@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#Script will replace `*...*` with `<b>...</b>` and `_..._` with `<i>...</i>`,
+#   these can be nested into each other.
+
+set -euo pipefail
+
+sed -E "s:\*([^*]+)\*:<b>\1</b>:g; s:_([^_]+)_:<i>\1</i>:g"
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#    Script will drop lines beginning with `#` and all the text after `#`.
+#   White space before `#` is ignored/removed:
+#  
+#     '  # comment\nTEXT'      -> 'TEXT'
+#     'TEXT  # comment\nTEXT'  -> 'TEXT\nTEXT'
+
+set -euo pipefail
+
+sed -E 's:[[:space:]]*#.*::; /^$/d'
+

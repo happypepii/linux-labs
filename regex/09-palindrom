@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#    For each input line the script will print `YES` or `NO` depending if
+#   if the line is palindrom -- word that is the same whether read forward
+#   or backward.
+
+# Note: regex cannot be used because palindrome requires counting/memory,
+# which regex (finite state machine) does not have.
+
+
+set -euo pipefail
+
+while read -r line; do
+    reversed=$(echo "$line" | rev)
+    if [ "$line" = "$reversed" ]; then
+        echo "YES"
+    else
+        echo "NO"
+    fi
+done

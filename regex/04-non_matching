@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Write a command that prints occurences of ABC, ABBC, ABBBC, ... on lines
+#   that do not contain DEF, DEEF, DEEEF, ....
+#   Can be solved by double call to `grep`.
+
+set -euo pipefail
+
+grep -Ev "DE+F" | grep -oE "AB+C"
+

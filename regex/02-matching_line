@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Write a command that prints nothing and terminates correctly only if the
+# input contains line ABC.
+
+set -euo pipefail
+
+grep -xq "^ABC$"
+

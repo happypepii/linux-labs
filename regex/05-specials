@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Write a command that prints lines containing any of the following
+#   substrings (without quotes):
+#     '+*', '+**', '+***', ...,
+#     three-letter word from the set of{'A', 'B', ..., 'Z', '-'},
+#     'a.txt'.
+#   (When defining set of chars, recall that '-' behaves differently when
+#    being the last character.)
+
+set -euo pipefail
+
+grep -E "\+\*+|[A-Z-]{3}|a\.txt"
+
+

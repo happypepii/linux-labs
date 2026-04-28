@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#   Script will receive URL as a parameter. From the given page it should
+#   print address of all images on it.
+#   More precisely it will find all `img` tags and print their `src` attribute,
+#   one per line:
+#  
+#     <img src="ADDR">  ->  ADDR
+#     <img class='image' src='ADDR' id='first'>  ->  ADDR
+#  
+#   Use curl to download the webpage, not `wget`.
+#   Feel free to test your script on Wikipedia site, for example.
+
+curl -s "$1" | grep -oE '<img[^>]+src=[^>]+>' | sed -E "s/.*src=['\"]([^'\"]+)['\"].*/\1/"
+

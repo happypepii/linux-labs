@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Write a command that prints lines containing word ABC; if there is
+#   another content around, it must be separated by whitespace from ABC.
+
+set -euo pipefail
+
+grep -w "ABC"
+
