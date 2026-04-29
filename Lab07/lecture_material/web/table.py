@@ -13,10 +13,11 @@ def main():
     reader = csv.DictReader(sys.stdin)
     for row in reader:
         totals[row['team']] = totals.get(row['team'], 0) + int(row['points'])
-
-    print("""
+	
+	caption = os.getenv('TABLE_CAPTION', 'Points')
+    print(f"""
 <table>
-  <caption>Points</caption>
+  <caption>{caption}</caption>
   <thead>
     <tr>
       <th>Team</th>

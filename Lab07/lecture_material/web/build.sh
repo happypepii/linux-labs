@@ -10,6 +10,6 @@ echo "</p>" >>version.inc.html
 
 pandoc --template template.html -A version.inc.html index.md >"$html_dir/index.html"
 pandoc --template template.html -A version.inc.html rules.md >"$html_dir/rules.html"
-./table.py <score.csv | pandoc --template template.html --metadata title="Score" -A version.inc.html - >"$html_dir/score.html"
+TABLE_CAPTION="Scoring table" ./table.py <score.csv | pandoc --template template.html --metadata title="Score" -A version.inc.html - >"$html_dir/score.html"
 cp main.css "$html_dir/"
 
