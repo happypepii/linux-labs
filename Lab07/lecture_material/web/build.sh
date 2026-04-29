@@ -3,7 +3,7 @@
 set -ueo pipefail
 
 echo "<p>Version:" >version.inc.html
-git rev-parse --short HEAD >>version.inc.html 2>/dev/null
+git rev-parse --short HEAD >>version.inc.html 2>/dev/null || echo "unkown" >>version.inc.html
 echo "</p>" >>version.inc.html
 
 pandoc --template template.html -A version.inc.html index.md >index.html
