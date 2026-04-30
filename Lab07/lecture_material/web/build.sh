@@ -2,7 +2,7 @@
 
 set -ueo pipefail
 
-html_dir="public"
+html_dir="${html_dir:-public}"
 verbose=false
 
 test "${1:-none}" == "--verbose" && verbose=true
