@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -euo pipefail
+
+var="value with spaces"
+echo "$var"
+
+echo "The result for args.py \$var is:"
+python3 args.py $var
+
+echo "The result for args.py \"\$var\" is:"
+python3 args.py "$var"

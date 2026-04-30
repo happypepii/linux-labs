@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -euo pipefail
+
+VAR=~
+echo "$VAR" '$VAR' $VAR
+VAR="~"
+echo "$VAR" '$VAR' $VAR
+
