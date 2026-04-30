@@ -2,20 +2,20 @@
 
 import csv
 import sys
+import os
 
 def sum_file(inp, results):
-    for line in inp:
-        (key, number) = line.split(maxsplit=1)
-        results[key] = results.get(key, 0) + int(number)
+	for line in inp:
+		(key, number) = line.split(maxsplit=1)
+		results[key] = results.get(key, 0) + int(number)
 
 def main():
-    totals = {}
-    reader = csv.DictReader(sys.stdin)
-    for row in reader:
-        totals[row['team']] = totals.get(row['team'], 0) + int(row['points'])
-	
+	totals = {}
+	reader = csv.DictReader(sys.stdin)
+	for row in reader:
+		totals[row['team']] = totals.get(row['team'], 0) + int(row['points'])
 	caption = os.getenv('TABLE_CAPTION', 'Points')
-    print(f"""
+	print(f"""
 <table>
   <caption>{caption}</caption>
   <thead>
@@ -26,12 +26,12 @@ def main():
   </thead>
   <tbody>""")
 
-    for team, points in sorted(totals.items(), key=lambda entry: entry[1], reverse=True):
-        print(f"    <tr><td>{team}</td><td>{points}</td></tr>")
+	for team, points in sorted(totals.items(), key=lambda entry: entry[1], reverse=True):
+		print(f"    <tr><td>{team}</td><td>{points}</td></tr>")
 
-    print("""  </tbody>
+	print("""  </tbody>
 </table>
 """)
 
 if __name__ == "__main__":
-    main()
+	main()
