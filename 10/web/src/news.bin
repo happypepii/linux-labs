@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -ueo pipefail
+
+sed '1,/^---NEWS-START-HERE---/d' "$0" | while read -r date comment; do
+    echo "<dt>$date</dt>"
+    echo "<dd>$comment</dd>"
+done | pandoc --template src/template.html --metadata title="News" -
+
+exit 0
+
+# Actual news are stored below.
+# Add each news item on a separate line
+#
+# !!! Do not modify the line NEWS-START-HERE !!!
+#
+
+---NEWS-START-HERE---
+2026-04-01 Website running
+2026-04-02 Registration open

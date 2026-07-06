@@ -1,0 +1,7 @@
+1..6
+ok 1 One - Smoke test
+ok 2 One - Works with 0 (ok=1,fail=-2)
+ok 3 Two - Smoke test (ok=1)
+not ok 4 Two - Empty file (fail=-1)
+ok 5 Two - One-byte long file (fail=-2)
+not ok 6 Two - Non-existent file (ok=3)
